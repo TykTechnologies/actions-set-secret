@@ -23,7 +23,7 @@ const boostrap = async (api, secret_name, secret_value) => {
       data.visibility = Core.getInput('visibility')
 
       if (data.visibility === 'selected') {
-        data.selected_repository_ids = Core.getInput('selected_repository_ids')
+        data.selected_repository_ids = JSON.parse(Core.getInput('selected_repository_ids'))
       }
     }
 
